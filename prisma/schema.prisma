@@ -1,0 +1,87 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Company {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  phone     String
+  address   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  users     User[]
+  positions Position[]
+}
+
+model User {
+  id        String   @id @default(uuid())
+  company   Company  @relation(fields: [companyId], references: [id])
+  companyId String
+  email     String   @unique
+  password  String
+  fullName  String
+  role      Role
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  positions Position[]
+}
+
+model Position {
+  id        String    @id @default(uuid())
+  company   Company   @relation(fields: [companyId], references: [id])
+  companyId String
+  title     String
+  location  String
+  type      PositionType
+  description String
+  salary    String
+  isActive  Boolean   @default(true)
+  createdBy User      @relation(fields: [createdById], references: [id])
+  createdById String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  applicants Applicant[]
+}
+
+model Applicant {
+  id         String   @id @default(uuid())
+  position   Position @relation(fields: [positionId], references: [id])
+  positionId String
+  fullName   String
+  email      String
+  phone      String
+  education  String
+  experience Int
+  resumeUrl  String
+  status     ApplicantStatus @default(APPLIED)
+  notes      String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+   @@index([positionId])
+  @@index([createdAt])
+}
+
+enum Role {
+  ADMIN
+  RECRUITER
+}
+
+enum PositionType {
+  FULL_TIME
+  PART_TIME
+  CONTRACT
+}
+
+enum ApplicantStatus {
+  APPLIED
+  REVIEWED
+  INTERVIEW
+  ACCEPTED
+  REJECTED
+}
