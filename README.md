@@ -27,25 +27,37 @@ cd Recruitment-Platform
 ## Setup Environtment
 
 Buat file .env
-'''DATABASE_URL="postgresql://user:password@localhost:5432/recruitment_db"
-'''JWT_SECRET="your_secret_key"
+
+```bash
+git clone https://github.com/Dayrennn/Recruitment-Platform.git
+cd Recruitment-Platform
+```
 
 ## Setup Database
 
-'''npx prisma migrate dev
+```bash
+npx prisma migrate dev
+```
 
 ## Run Server
 
-'''npm run dev
+```bash
+npm run dev
+```
 
 ## Run Prisma Studio
 
-'''npx prisma studio
+```bash
+npx prisma studio
+```
 
 ## Authentication
 
 gunakan **Bearer Token:**
-'''Authorization: Bearer <token>
+
+```bash
+Authorization: Bearer <token>
+```
 
 ## API Endpoints
 
@@ -129,3 +141,7 @@ RECRUITMENT-PLATFORM
 ├── README.md
 |── Recruitment API.postman_collection.json //export postman
 └── tsconfig.json
+
+```
+
+```
