@@ -55,7 +55,7 @@ npx prisma studio
 
 ## Authentication
 
-gunakan **Bearer Token:**
+buka postman, pada tab headers gunakan **Authorization dan Bearer (Token)** yang didapat dari login
 
 ```bash
 Authorization: Bearer <token>
