@@ -22,41 +22,30 @@ cd Recruitment-Platform
 
 ## Install Dependencies
 
-''' sh
-npm install
-'''
+'''npm install
 
 ## Setup Environtment
 
 Buat file .env
-''' sh
-DATABASE_URL="postgresql://user:password@localhost:5432/recruitment_db"
-JWT_SECRET="your_secret_key"
-'''
+'''DATABASE_URL="postgresql://user:password@localhost:5432/recruitment_db"
+'''JWT_SECRET="your_secret_key"
 
 ## Setup Database
 
-''' sh
-npx prisma migrate dev
-'''
+'''npx prisma migrate dev
 
 ## Run Server
 
-''' sh
-npm run dev
+'''npm run dev
 
 ## Run Prisma Studio
 
-''' sh
-npx prisma studio
-'''
+'''npx prisma studio
 
 ## Authentication
 
 gunakan **Bearer Token:**
-'''sh
-Authorization: Bearer <token>
-'''
+'''Authorization: Bearer <token>
 
 ## API Endpoints
 
