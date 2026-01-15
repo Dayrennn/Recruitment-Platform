@@ -15,14 +15,16 @@ Backend REST API untuk sistem rekrutment berbasis **multi-tenancy, RBAC,** dan *
 
 ## Clone Repository
 
-''' sh
+```bash
 git clone https://github.com/Dayrennn/Recruitment-Platform.git
 cd Recruitment-Platform
-'''
+```
 
 ## Install Dependencies
 
-'''npm install
+```bash
+npm install
+```
 
 ## Setup Environtment
 
