@@ -141,7 +141,3 @@ RECRUITMENT-PLATFORM
 ├── README.md
 |── Recruitment API.postman_collection.json //export postman
 └── tsconfig.json
-
-```
-
-```
