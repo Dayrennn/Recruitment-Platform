@@ -109,6 +109,7 @@ API ini dirancang untuk mengikuti tes technical test
 
 # Struktur Folder
 
+```bash
 RECRUITMENT-PLATFORM
 ├── prisma/ // Berisi konfigurasi database dan ORM
 │ ├── migrations/
@@ -141,3 +142,4 @@ RECRUITMENT-PLATFORM
 ├── README.md
 |── Recruitment API.postman_collection.json //export postman
 └── tsconfig.json
+```
