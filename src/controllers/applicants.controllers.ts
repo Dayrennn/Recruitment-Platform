@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { ApplicantStatus, PrismaClient } from "@prisma/client";
-import { prisma } from "../libs/prisma";
+import prisma from "../libs/prisma";
 
 // create applicant
 export const createApplicant = async (req: Request, res: Response) => {

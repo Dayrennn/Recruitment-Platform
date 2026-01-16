@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { prisma } from "../libs/prisma";
+import prisma from "../libs/prisma";
 import bcrypt from "bcrypt";
 import { generateToken } from "../utils/jwt";
 import { AuthRequest } from "../middleware/auth.middleware";

@@ -1,6 +1,6 @@
 import { AuthRequest } from "../middleware/auth.middleware";
 import { Response } from "express";
-import { prisma } from "../libs/prisma";
+import prisma from "../libs/prisma";
 
 // create position
 export const createPosition = async (req: AuthRequest, res: Response) => {
