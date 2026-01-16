@@ -1,11 +1,11 @@
 import request from "supertest";
-import app from "../src/server"; // pastikan app export dari service.ts
+import app from "../src/server";
 import prisma from "../src/libs/prisma";
 
 let token: string;
 
 beforeAll(async () => {
-  // login admin dulu, ambil token
+  // login untuk ambil token
   const res = await request(app)
     .post("/api/auth/login")
     .send({ email: "admin@majujaya.com", password: "Pass123!" });
@@ -13,7 +13,7 @@ beforeAll(async () => {
 });
 
 afterAll(async () => {
-  // optional: hapus data test
+  // hapus data test
   await prisma.user.deleteMany({
     where: { email: "testrecruiter@example.com" },
   });

@@ -33,7 +33,7 @@ Buat file .env
 
 ```bash
 DATABASE_URL="postgresql://user:password@localhost:5432/recruitment"
-JWT_SECRET="your_jwt_secret_key"
+JWT_SECRET="supersecretkey"
 PORT=3000
 ```
 

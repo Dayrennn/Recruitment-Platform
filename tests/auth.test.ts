@@ -11,7 +11,7 @@ beforeAll(async () => {
     where: { email: "testuser@example.com" },
   });
 
-  // register admin baru (optional, kalau sudah ada admin bisa skip)
+  // register admin baru
   const resRegister = await request(app).post("/api/auth/register").send({
     companyName: "Test Company",
     email: "admin@test.com",

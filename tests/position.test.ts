@@ -32,10 +32,9 @@ describe("User Management", () => {
         role: "RECRUITER",
       });
 
-    // Pastikan status 201
     expect(res.status).toBe(201);
 
-    // Pastikan user yang dibuat benar
+    // memastikan user yang dibuat benar
     expect(res.body.user.email).toBe("testrecruiter@example.com");
     expect(res.body.user.role).toBe("RECRUITER");
   });
